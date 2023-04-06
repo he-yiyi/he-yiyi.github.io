@@ -1157,6 +1157,7 @@ article .content blockquote:before {
   vertical-align: -0.4em;
   font-size: 2em;
   line-height: 0.1em;
+  display: none;
 }
 article .content blockquote footer {
   margin: line-height 0;
