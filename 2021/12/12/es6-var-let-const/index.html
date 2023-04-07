@@ -9,12 +9,12 @@
     <meta name="description" content="说说var、let、const之间的区别一、var在ES5中，顶层对象的属性和全局变量是等价的，用var声明的变量既是全局变量，也是顶层变量 注意：顶层对象，在浏览器环境指的是window对象，在 Node 指的是global对象 12var a &#x3D; 10;console.log(window.a) &#x2F;&#x2F; 10  使用var声明的变量存在变量提升的情况 12console.log(a) &#x2F;&#x2F; un">
 <meta property="og:type" content="article">
 <meta property="og:title" content="说说var、let、const之间的区别">
-<meta property="og:url" content="http://example.com/2023/12/12/es6-var-let-const/index.html">
+<meta property="og:url" content="http://example.com/2021/12/12/es6-var-let-const/index.html">
 <meta property="og:site_name" content="Heyi">
 <meta property="og:description" content="说说var、let、const之间的区别一、var在ES5中，顶层对象的属性和全局变量是等价的，用var声明的变量既是全局变量，也是顶层变量 注意：顶层对象，在浏览器环境指的是window对象，在 Node 指的是global对象 12var a &#x3D; 10;console.log(window.a) &#x2F;&#x2F; 10  使用var声明的变量存在变量提升的情况 12console.log(a) &#x2F;&#x2F; un">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-12-12T11:23:34.000Z">
-<meta property="article:modified_time" content="2023-04-07T03:45:35.246Z">
+<meta property="article:published_time" content="2021-12-12T11:23:34.000Z">
+<meta property="article:modified_time" content="2023-04-07T03:55:19.827Z">
 <meta property="article:author" content="heliang">
 <meta property="article:tag" content="es6_var_let_const">
 <meta name="twitter:card" content="summary">
@@ -78,7 +78,7 @@
       <ul>
         
         
-        <li><a class="icon" aria-label="Next post" href="/2021/12/07/es6-set-map/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Next post" href="/2021/12/01/es6-set-map/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
         <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" aria-label="Share post" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
@@ -91,17 +91,17 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2023/12/12/es6-var-let-const/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2023/12/12/es6-var-let-const/&text=说说var、let、const之间的区别"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2023/12/12/es6-var-let-const/&title=说说var、let、const之间的区别"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2023/12/12/es6-var-let-const/&is_video=false&description=说说var、let、const之间的区别"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=说说var、let、const之间的区别&body=Check out this article: http://example.com/2023/12/12/es6-var-let-const/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2023/12/12/es6-var-let-const/&title=说说var、let、const之间的区别"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2023/12/12/es6-var-let-const/&title=说说var、let、const之间的区别"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2023/12/12/es6-var-let-const/&title=说说var、let、const之间的区别"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2023/12/12/es6-var-let-const/&title=说说var、let、const之间的区别"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2023/12/12/es6-var-let-const/&name=说说var、let、const之间的区别&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2023/12/12/es6-var-let-const/&t=说说var、let、const之间的区别"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2021/12/12/es6-var-let-const/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2021/12/12/es6-var-let-const/&text=说说var、let、const之间的区别"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2021/12/12/es6-var-let-const/&title=说说var、let、const之间的区别"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2021/12/12/es6-var-let-const/&is_video=false&description=说说var、let、const之间的区别"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=说说var、let、const之间的区别&body=Check out this article: http://example.com/2021/12/12/es6-var-let-const/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2021/12/12/es6-var-let-const/&title=说说var、let、const之间的区别"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2021/12/12/es6-var-let-const/&title=说说var、let、const之间的区别"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2021/12/12/es6-var-let-const/&title=说说var、let、const之间的区别"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2021/12/12/es6-var-let-const/&title=说说var、let、const之间的区别"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2021/12/12/es6-var-let-const/&name=说说var、let、const之间的区别&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2021/12/12/es6-var-let-const/&t=说说var、let、const之间的区别"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -130,7 +130,7 @@
       
     <div class="postdate">
       
-        <time datetime="2023-12-12T11:23:34.000Z" itemprop="datePublished">2023-12-12</time>
+        <time datetime="2021-12-12T11:23:34.000Z" itemprop="datePublished">2021-12-12</time>
         
       
     </div>
@@ -285,17 +285,17 @@
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2023/12/12/es6-var-let-const/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2023/12/12/es6-var-let-const/&text=说说var、let、const之间的区别"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2023/12/12/es6-var-let-const/&title=说说var、let、const之间的区别"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2023/12/12/es6-var-let-const/&is_video=false&description=说说var、let、const之间的区别"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=说说var、let、const之间的区别&body=Check out this article: http://example.com/2023/12/12/es6-var-let-const/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2023/12/12/es6-var-let-const/&title=说说var、let、const之间的区别"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2023/12/12/es6-var-let-const/&title=说说var、let、const之间的区别"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2023/12/12/es6-var-let-const/&title=说说var、let、const之间的区别"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2023/12/12/es6-var-let-const/&title=说说var、let、const之间的区别"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2023/12/12/es6-var-let-const/&name=说说var、let、const之间的区别&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2023/12/12/es6-var-let-const/&t=说说var、let、const之间的区别"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2021/12/12/es6-var-let-const/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2021/12/12/es6-var-let-const/&text=说说var、let、const之间的区别"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2021/12/12/es6-var-let-const/&title=说说var、let、const之间的区别"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2021/12/12/es6-var-let-const/&is_video=false&description=说说var、let、const之间的区别"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=说说var、let、const之间的区别&body=Check out this article: http://example.com/2021/12/12/es6-var-let-const/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2021/12/12/es6-var-let-const/&title=说说var、let、const之间的区别"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2021/12/12/es6-var-let-const/&title=说说var、let、const之间的区别"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2021/12/12/es6-var-let-const/&title=说说var、let、const之间的区别"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2021/12/12/es6-var-let-const/&title=说说var、let、const之间的区别"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2021/12/12/es6-var-let-const/&name=说说var、let、const之间的区别&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2021/12/12/es6-var-let-const/&t=说说var、let、const之间的区别"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
